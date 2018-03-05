@@ -1,0 +1,23 @@
+{
+  "name": "s3-static-uploader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && mkdir build && yarn tsc",
+    "lint": "tslint --project tsconfig.lint.json"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "klaw": "^2.1.1"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^5.0.1",
+    "@types/klaw": "^2.1.1",
+    "aws-sdk": "^2.205.0",
+    "typescript": "2.6",
+    "tslint": "^5.9.1"
+  }
+}
