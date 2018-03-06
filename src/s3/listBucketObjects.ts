@@ -9,5 +9,5 @@ export async function listBucketObjects (
     Bucket: bucketName,
   };
 
-  return promisify(s3.listObjects)(params);
+  return promisify(s3.listObjects.bind(s3))(params);
 }

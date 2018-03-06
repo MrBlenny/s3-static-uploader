@@ -13,5 +13,5 @@ export async function staticWebsiteSetup (
       },
     },
   };
-  return promisify(s3.putBucketWebsite)(params);
+  return promisify(s3.putBucketWebsite.bind(s3))(params);
 }

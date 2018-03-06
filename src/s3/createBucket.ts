@@ -10,5 +10,5 @@ export async function createBucket (
     ACL: 'public-read',
   };
 
-  return promisify(s3.createBucket, true)(params)
+  return promisify(s3.createBucket.bind(s3), true)(params)
 }

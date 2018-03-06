@@ -1,17 +1,21 @@
 {
   "name": "s3-static-uploader",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "build/index.js",
   "scripts": {
     "build": "rm -rf build && mkdir build && yarn tsc",
     "lint": "tslint --project tsconfig.lint.json"
   },
-  "author": "",
+  "author": "David Revay",
   "license": "ISC",
-  "description": "",
+  "description": "A few utils that make manipulating your s3 bucket easy.",
   "dependencies": {
     "fs-extra": "^5.0.0",
     "klaw": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:MrBlenny/s3-static-uploader.git"
   },
   "devDependencies": {
     "@types/fs-extra": "^5.0.1",

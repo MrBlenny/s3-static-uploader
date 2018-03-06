@@ -11,5 +11,5 @@ export async function updateBucketPolicy (
     Policy: JSON.stringify(policy),
   };
 
-  return promisify(s3.putBucketPolicy)(params);
+  return promisify(s3.putBucketPolicy.bind(s3))(params);
 }

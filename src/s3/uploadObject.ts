@@ -17,5 +17,5 @@ export async function uploadObject (
     Body: body,
   };
 
-  return promisify(s3.putObject)(params);
+  return promisify(s3.putObject.bind(s3))(params);
 }

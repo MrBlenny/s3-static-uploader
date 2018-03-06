@@ -11,5 +11,5 @@ export async function deleteObject (
     Key: key,
   };
 
-  return promisify(s3.deleteObject)(params);
+  return promisify(s3.deleteObject.bind(s3))(params);
 }
