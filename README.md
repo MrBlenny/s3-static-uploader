@@ -2,6 +2,11 @@
 
 This provides a few utils that make manipulating your s3 bucket easy. It is designed to upload an entire directory and configure it for static hosting.
 
+Install with:
+`npm i s3-static-uploader`
+
+The following utils are made available. Their interfaces are typed with typescript so you should get i/o annotations.
+
 * clearBucket
 * createBucket
 * deleteBucket

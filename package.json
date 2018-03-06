@@ -1,7 +1,7 @@
 {
   "name": "s3-static-uploader",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
     "build": "rm -rf build && mkdir build && yarn tsc",
     "lint": "tslint --project tsconfig.lint.json"
