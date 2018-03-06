@@ -1,7 +1,6 @@
 # S3 Static Uploader
 
 This provides a few utils that make manipulating your s3 bucket easy. It is designed to upload an entire directory and configure it for static hosting.
-This is specifically designed for uploaded json files. I/you should probably change this (by removing the hardcoded content-type in `./s3/uploadObject`).
 
 Install with:
 `npm i s3-static-uploader`

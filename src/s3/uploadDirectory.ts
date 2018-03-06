@@ -6,6 +6,7 @@ export async function uploadDirectory (
   s3: S3,                // An initialised and configured S3 Lib
   bucketName: string,    // The name of the bucket you want to delete items from
   directoryPath: string, // The object you want to delete
+  pathTransform: (key: string) => string, // Function that transforms the path name
 ) {
   // Create an array of files in the directory
   const directoryFiles = await walkDirectory(directoryPath);
@@ -13,6 +14,6 @@ export async function uploadDirectory (
   return Promise.all(
     directoryFiles
       .filter((file) => file.endsWith('.json'))
-      .map((file) => uploadObject(s3, bucketName, file, directoryPath)),
+      .map((file) => uploadObject(s3, bucketName, file, directoryPath, pathTransform)),
   );
 }

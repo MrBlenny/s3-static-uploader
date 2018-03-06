@@ -1,6 +1,6 @@
 {
   "name": "s3-static-uploader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "build/index.js",
   "scripts": {
     "build": "rm -rf build && mkdir build && yarn tsc",
@@ -11,17 +11,19 @@
   "description": "A few utils that make manipulating your s3 bucket easy.",
   "dependencies": {
     "fs-extra": "^5.0.0",
-    "klaw": "^2.1.1"
+    "klaw": "^2.1.1",
+    "mime": "^2.2.0"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:MrBlenny/s3-static-uploader.git"
   },
   "devDependencies": {
+    "@types/mime": "^2.0.0",
     "@types/fs-extra": "^5.0.1",
     "@types/klaw": "^2.1.1",
     "aws-sdk": "^2.205.0",
-    "typescript": "2.6",
-    "tslint": "^5.9.1"
+    "tslint": "^5.9.1",
+    "typescript": "2.6"
   }
 }
