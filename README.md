@@ -7,14 +7,15 @@ Install with:
 
 The following utils are made available. Their interfaces are typed with typescript so you should get i/o annotations.
 
-* clearBucket
-* createBucket
-* deleteBucket
-* listBucketObjects
-* staticWebsiteSetup
-* updateBucketPolicy
-* uploadDirectory
-* uploadObject
+* `js clearBucket(s3, bucketName)`
+* `createBucket(s3, bucketName)`
+* `listBucketObjects(s3, bucketName)`
+* `staticWebsiteSetup(s3, bucketName)`
+* `updateBucketPolicy(s3, bucketName, policy)`
+* `uploadDirectory(s3, bucketName, directoryPath, ?pathTransform)`
+* `uploadObject(s3, bucketName, path, directoryPath, ?pathTransform)`
+* `deleteObject(s3, bucketName, key)`
+
 
 ### Example
 
