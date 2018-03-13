@@ -1,20 +1,21 @@
 # S3 Static Uploader
 
-This provides a few utils that make manipulating your s3 bucket easy. It is designed to upload an entire directory and configure it for static hosting.
+This provides a few utils that make manipulating your s3 bucket easy. It is designed to upload an entire directory and configure it for static hosting. Each util function takes in an `s3` object which you'll need to create and configure yourself using the aws-sdk. Usually this is done something like `const s3 = new AWS.S3({ signatureVersion: 'v4' });`.
 
 Install with:
 `npm i s3-static-uploader`
 
 The following utils are made available. Their interfaces are typed with typescript so you should get i/o annotations.
 
-* clearBucket
-* createBucket
-* deleteBucket
-* listBucketObjects
-* staticWebsiteSetup
-* updateBucketPolicy
-* uploadDirectory
-* uploadObject
+* `clearBucket(s3, bucketName)`
+* `createBucket(s3, bucketName)`
+* `listBucketObjects(s3, bucketName)`
+* `staticWebsiteSetup(s3, bucketName)`
+* `updateBucketPolicy(s3, bucketName, policy)`
+* `uploadDirectory(s3, bucketName, directoryPath, ?pathTransform)`
+* `uploadObject(s3, bucketName, path, directoryPath, ?pathTransform)`
+* `deleteObject(s3, bucketName, key)`
+
 
 ### Example
 
