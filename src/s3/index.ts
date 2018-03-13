@@ -6,3 +6,4 @@ export * from './staticWebsiteSetup';
 export * from './updateBucketPolicy';
 export * from './uploadDirectory';
 export * from './uploadObject';
+export * from './bucketCors';
