@@ -13,6 +13,7 @@ export async function uploadDirectory (
   // Upload every file in the directory
   return Promise.all(
     directoryFiles
+      .filter((file) => file.split('.').length > 1)
       .map((file) => uploadObject(s3, bucketName, file, directoryPath, pathTransform)),
   );
 }
