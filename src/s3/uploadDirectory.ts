@@ -10,10 +10,9 @@ export async function uploadDirectory (
 ) {
   // Create an array of files in the directory
   const directoryFiles = await walkDirectory(directoryPath);
-  // Upload every .json file in the directory
+  // Upload every file in the directory
   return Promise.all(
     directoryFiles
-      .filter((file) => file.endsWith('.json'))
       .map((file) => uploadObject(s3, bucketName, file, directoryPath, pathTransform)),
   );
 }
