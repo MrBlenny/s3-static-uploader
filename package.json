@@ -1,9 +1,9 @@
 {
   "name": "s3-static-uploader",
   "version": "1.0.8",
-  "main": "build/index.js",
   "scripts": {
-    "build": "rm -rf build && mkdir build && yarn tsc",
+    "build": "rm -rf build && mkdir build && yarn tsc && cp ./package.json ./build/package.json",
+    "release": "cd build && npm publish",
     "lint": "tslint --project tsconfig.lint.json"
   },
   "author": "David Revay",
