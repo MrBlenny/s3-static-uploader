@@ -11,6 +11,7 @@ export async function bucketCors (
       CORSRules: [{
         AllowedMethods: ['GET'],
         AllowedOrigins: ['*'],
+        AllowedHeader: ['*'],
       }]
     },
   };
